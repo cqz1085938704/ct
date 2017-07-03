@@ -13,6 +13,15 @@
 		328AF8441BF03DC400C02A1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 328AF8421BF03DC400C02A1D /* Main.storyboard */; };
 		328AF8461BF03DC400C02A1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 328AF8451BF03DC400C02A1D /* Assets.xcassets */; };
 		328AF8491BF03DC400C02A1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 328AF8471BF03DC400C02A1D /* LaunchScreen.storyboard */; };
+		328AF8521BF03DFA00C02A1D /* CTDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 328AF8511BF03DFA00C02A1D /* CTDisplayView.m */; };
+		328AF8541BF040AB00C02A1D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328AF8531BF040AB00C02A1D /* CoreText.framework */; };
+		328AF8571BF045C500C02A1D /* CTFrameParserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 328AF8561BF045C500C02A1D /* CTFrameParserConfig.m */; };
+		328AF85A1BF045EB00C02A1D /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 328AF8591BF045EB00C02A1D /* UIView+Frame.m */; };
+		328AF85D1BF04A0C00C02A1D /* CTFrameParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 328AF85C1BF04A0C00C02A1D /* CTFrameParser.m */; };
+		328AF8601BF04AEB00C02A1D /* CoreTextData.m in Sources */ = {isa = PBXBuildFile; fileRef = 328AF85F1BF04AEB00C02A1D /* CoreTextData.m */; };
+		32CFA5A91F09F08500442AAF /* CoreTextUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CFA5A81F09F08500442AAF /* CoreTextUtil.m */; };
+		32CFA5AC1F09F0E000442AAF /* CoreTextLinkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CFA5AB1F09F0E000442AAF /* CoreTextLinkData.m */; };
+		32CFA5AE1F0A313000442AAF /* template.json in Resources */ = {isa = PBXBuildFile; fileRef = 32CFA5AD1F0A313000442AAF /* template.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +35,22 @@
 		328AF8451BF03DC400C02A1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		328AF8481BF03DC400C02A1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		328AF84A1BF03DC400C02A1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		328AF8501BF03DFA00C02A1D /* CTDisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTDisplayView.h; sourceTree = "<group>"; };
+		328AF8511BF03DFA00C02A1D /* CTDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTDisplayView.m; sourceTree = "<group>"; };
+		328AF8531BF040AB00C02A1D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		328AF8551BF045C500C02A1D /* CTFrameParserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTFrameParserConfig.h; sourceTree = "<group>"; };
+		328AF8561BF045C500C02A1D /* CTFrameParserConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTFrameParserConfig.m; sourceTree = "<group>"; };
+		328AF8581BF045EB00C02A1D /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		328AF8591BF045EB00C02A1D /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		328AF85B1BF04A0C00C02A1D /* CTFrameParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTFrameParser.h; sourceTree = "<group>"; };
+		328AF85C1BF04A0C00C02A1D /* CTFrameParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTFrameParser.m; sourceTree = "<group>"; };
+		328AF85E1BF04AEB00C02A1D /* CoreTextData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreTextData.h; sourceTree = "<group>"; };
+		328AF85F1BF04AEB00C02A1D /* CoreTextData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreTextData.m; sourceTree = "<group>"; };
+		32CFA5A71F09F08500442AAF /* CoreTextUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreTextUtil.h; sourceTree = "<group>"; };
+		32CFA5A81F09F08500442AAF /* CoreTextUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreTextUtil.m; sourceTree = "<group>"; };
+		32CFA5AA1F09F0E000442AAF /* CoreTextLinkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreTextLinkData.h; sourceTree = "<group>"; };
+		32CFA5AB1F09F0E000442AAF /* CoreTextLinkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreTextLinkData.m; sourceTree = "<group>"; };
+		32CFA5AD1F0A313000442AAF /* template.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = template.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				328AF8541BF040AB00C02A1D /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +68,7 @@
 		328AF82D1BF03DC400C02A1D = {
 			isa = PBXGroup;
 			children = (
+				328AF8531BF040AB00C02A1D /* CoreText.framework */,
 				328AF8381BF03DC400C02A1D /* 富文本Demo */,
 				328AF8371BF03DC400C02A1D /* Products */,
 			);
@@ -62,11 +89,25 @@
 				328AF83D1BF03DC400C02A1D /* AppDelegate.m */,
 				328AF83F1BF03DC400C02A1D /* ViewController.h */,
 				328AF8401BF03DC400C02A1D /* ViewController.m */,
+				328AF8501BF03DFA00C02A1D /* CTDisplayView.h */,
+				328AF8511BF03DFA00C02A1D /* CTDisplayView.m */,
 				328AF8421BF03DC400C02A1D /* Main.storyboard */,
 				328AF8451BF03DC400C02A1D /* Assets.xcassets */,
 				328AF8471BF03DC400C02A1D /* LaunchScreen.storyboard */,
 				328AF84A1BF03DC400C02A1D /* Info.plist */,
 				328AF8391BF03DC400C02A1D /* Supporting Files */,
+				32CFA5A71F09F08500442AAF /* CoreTextUtil.h */,
+				32CFA5A81F09F08500442AAF /* CoreTextUtil.m */,
+				328AF8551BF045C500C02A1D /* CTFrameParserConfig.h */,
+				328AF8561BF045C500C02A1D /* CTFrameParserConfig.m */,
+				328AF8581BF045EB00C02A1D /* UIView+Frame.h */,
+				328AF8591BF045EB00C02A1D /* UIView+Frame.m */,
+				328AF85B1BF04A0C00C02A1D /* CTFrameParser.h */,
+				328AF85C1BF04A0C00C02A1D /* CTFrameParser.m */,
+				328AF85E1BF04AEB00C02A1D /* CoreTextData.h */,
+				328AF85F1BF04AEB00C02A1D /* CoreTextData.m */,
+				32CFA5AA1F09F0E000442AAF /* CoreTextLinkData.h */,
+				32CFA5AB1F09F0E000442AAF /* CoreTextLinkData.m */,
 			);
 			path = "富文本Demo";
 			sourceTree = "<group>";
@@ -75,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				328AF83A1BF03DC400C02A1D /* main.m */,
+				32CFA5AD1F0A313000442AAF /* template.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -137,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				328AF8491BF03DC400C02A1D /* LaunchScreen.storyboard in Resources */,
+				32CFA5AE1F0A313000442AAF /* template.json in Resources */,
 				328AF8461BF03DC400C02A1D /* Assets.xcassets in Resources */,
 				328AF8441BF03DC400C02A1D /* Main.storyboard in Resources */,
 			);
@@ -149,8 +192,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				328AF85A1BF045EB00C02A1D /* UIView+Frame.m in Sources */,
+				328AF8601BF04AEB00C02A1D /* CoreTextData.m in Sources */,
 				328AF8411BF03DC400C02A1D /* ViewController.m in Sources */,
+				32CFA5AC1F09F0E000442AAF /* CoreTextLinkData.m in Sources */,
 				328AF83E1BF03DC400C02A1D /* AppDelegate.m in Sources */,
+				328AF8521BF03DFA00C02A1D /* CTDisplayView.m in Sources */,
+				32CFA5A91F09F08500442AAF /* CoreTextUtil.m in Sources */,
+				328AF8571BF045C500C02A1D /* CTFrameParserConfig.m in Sources */,
+				328AF85D1BF04A0C00C02A1D /* CTFrameParser.m in Sources */,
 				328AF83B1BF03DC400C02A1D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +350,7 @@
 				328AF84F1BF03DC400C02A1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
