@@ -16,6 +16,7 @@
     {
         _title = nil;
         _link = nil;
+        _range = NSMakeRange(0, 0);
     }
     return self;
 }

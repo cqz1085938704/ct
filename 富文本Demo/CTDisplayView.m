@@ -39,15 +39,15 @@
     {
         [self.data.mString removeAttribute:NSBackgroundColorAttributeName range:link.range];
     }
-    CTFrameParserConfig *config = [[CTFrameParserConfig alloc] init];
-    config.textColor = [UIColor blackColor];
-    config.width = WIN_SIZE.width;
     
     CTFramesetterRef frameSetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)self.data.mString);
     
     CGSize restrictSize = CGSizeMake(WIN_SIZE.width, CGFLOAT_MAX);
     CGSize coreTextSize = CTFramesetterSuggestFrameSizeWithConstraints(frameSetter, CFRangeMake(0, 0), nil, restrictSize, nil);
     CGFloat textHeight = coreTextSize.height;
+    
+    CTFrameParserConfig *config = [[CTFrameParserConfig alloc] init];
+    config.width = WIN_SIZE.width;
     
     CTFrameRef frame = [CTFrameParser createFrameWithFrameSetter:frameSetter config:config height:textHeight];
     self.data.ctFrame = frame;

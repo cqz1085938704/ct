@@ -16,5 +16,6 @@
 @property (nonatomic, assign)CGFloat fontSize;
 @property (nonatomic, assign)CGFloat lineSpace;
 @property (nonatomic, strong)UIColor *textColor;
+@property (nonatomic, strong)UIColor *linkColor;
 
 @end

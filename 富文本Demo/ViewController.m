@@ -24,6 +24,7 @@
     CTFrameParserConfig *config = [[CTFrameParserConfig alloc] init];
     config.textColor = [UIColor blackColor];
     config.width = WIN_SIZE.width;
+    config.fontSize = 20;
     
     CoreTextData *data = [CTFrameParser loadFile:config];
     

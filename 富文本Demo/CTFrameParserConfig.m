@@ -8,16 +8,19 @@
 
 #import "CTFrameParserConfig.h"
 
+#define WIN_SIZE [UIScreen mainScreen].bounds.size
+
 @implementation CTFrameParserConfig
 
 -(instancetype)init
 {
     if (self = [super init])
     {
-        _width = 200.0f;
+        _width = WIN_SIZE.width;
         _fontSize = 16.0f;
         _lineSpace = 8.0f;
-        _textColor = [UIColor colorWithRed:108/255.0 green:108/255.0 blue:108/255.0 alpha:1];
+        _textColor = [UIColor blackColor];
+        _linkColor = [UIColor blueColor];
     }
     return self;
 }

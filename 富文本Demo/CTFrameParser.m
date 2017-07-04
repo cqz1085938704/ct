@@ -49,10 +49,9 @@
     NSMutableAttributedString *mas = [[NSMutableAttributedString alloc] init];
     for (NSDictionary *infoDic in contentsArr)
     {
-        UIFont *font = [UIFont systemFontOfSize:15];
         if ([infoDic[@"type"] isEqualToString:@"txt"])
         {
-            NSAttributedString *as = [[NSAttributedString alloc] initWithString:infoDic[@"title"] attributes:@{NSForegroundColorAttributeName:[UIColor blackColor], NSFontAttributeName:font}];
+            NSAttributedString *as = [[NSAttributedString alloc] initWithString:infoDic[@"title"] attributes:@{NSForegroundColorAttributeName:config.textColor, NSFontAttributeName:[UIFont systemFontOfSize:config.fontSize]}];
             [mas appendAttributedString:as];
         }
         else if ([infoDic[@"type"] isEqualToString:@"link"])
@@ -63,12 +62,12 @@
             linkData.range = NSMakeRange(mas.length, [infoDic[@"title"] length]);
             [linkArr addObject:linkData];
             
-            NSAttributedString *as = [[NSAttributedString alloc] initWithString:infoDic[@"title"] attributes:@{NSForegroundColorAttributeName:[UIColor redColor], NSFontAttributeName:font}];
+            NSAttributedString *as = [[NSAttributedString alloc] initWithString:infoDic[@"title"] attributes:@{NSForegroundColorAttributeName:config.linkColor, NSFontAttributeName:[UIFont systemFontOfSize:config.fontSize]}];
             [mas appendAttributedString:as];
         }
         else
         {
-            
+            NSLog(@"unsupported type");
         }
     }
     
