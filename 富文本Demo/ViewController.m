@@ -8,27 +8,29 @@
 
 #import "ViewController.h"
 
+#define WIN_SIZE [UIScreen mainScreen].bounds.size
+
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.view.userInteractionEnabled = YES;
-    
-    CTDisplayView *view = [[CTDisplayView alloc] initWithFrame:CGRectMake(0, 20, 320, 320)];
-    [self.view addSubview:view];
     
     CTFrameParserConfig *config = [[CTFrameParserConfig alloc] init];
     config.textColor = [UIColor blackColor];
-    config.width = view.width;
+    config.width = WIN_SIZE.width;
     
     CoreTextData *data = [CTFrameParser loadFile:config];
+    
+    CTDisplayView *view = [[CTDisplayView alloc] initWithFrame:CGRectMake(0, 20, WIN_SIZE.width, WIN_SIZE.height - 20)];
     view.data = data;
     view.height = data.height;
+    [self.view addSubview:view];
 }
 
 - (void)didReceiveMemoryWarning {

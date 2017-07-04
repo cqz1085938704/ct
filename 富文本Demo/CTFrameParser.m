@@ -49,9 +49,10 @@
     NSMutableAttributedString *mas = [[NSMutableAttributedString alloc] init];
     for (NSDictionary *infoDic in contentsArr)
     {
+        UIFont *font = [UIFont systemFontOfSize:15];
         if ([infoDic[@"type"] isEqualToString:@"txt"])
         {
-            NSAttributedString *as = [[NSAttributedString alloc] initWithString:infoDic[@"title"] attributes:@{NSForegroundColorAttributeName:[UIColor blackColor]}];
+            NSAttributedString *as = [[NSAttributedString alloc] initWithString:infoDic[@"title"] attributes:@{NSForegroundColorAttributeName:[UIColor blackColor], NSFontAttributeName:font}];
             [mas appendAttributedString:as];
         }
         else if ([infoDic[@"type"] isEqualToString:@"link"])
@@ -62,7 +63,7 @@
             linkData.range = NSMakeRange(mas.length, [infoDic[@"title"] length]);
             [linkArr addObject:linkData];
             
-            NSAttributedString *as = [[NSAttributedString alloc] initWithString:infoDic[@"title"] attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
+            NSAttributedString *as = [[NSAttributedString alloc] initWithString:infoDic[@"title"] attributes:@{NSForegroundColorAttributeName:[UIColor redColor], NSFontAttributeName:font}];
             [mas appendAttributedString:as];
         }
         else
@@ -83,6 +84,7 @@
     d.ctFrame = frame;
     d.height = textHeight;
     d.linkArray = linkArr;
+    d.mString = mas;
     
     CFRelease(frame);
     CFRelease(frameSetter);

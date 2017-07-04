@@ -16,6 +16,10 @@
 @interface CTFrameParser : NSObject
 
 + (CoreTextData *)loadFile:(CTFrameParserConfig *)config;
-+ (CoreTextData *)parseContent:(NSString *)content config:(CTFrameParserConfig *)config;
++ (CoreTextData *)parseContent:(NSString *)content
+                        config:(CTFrameParserConfig *)config;
++ (CTFrameRef)createFrameWithFrameSetter:(CTFramesetterRef)frameSetter
+                                  config:(CTFrameParserConfig *)config
+                                  height:(CGFloat)height;
 
 @end

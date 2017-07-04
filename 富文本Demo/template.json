@@ -11,11 +11,11 @@
                  },
                  {
                  "type": "txt",
-                 "title": "建立一个核心文本项目为了充分利用这个CoreText教程，您首先要知道iOS开发的基础知识。如果你是iOS开发新手，首先你应该看看的一些基础教程.事不宜迟，让我们通过自己开发一个简单的《杂志》应用程序:"
+                 "title": "建立一个核心文本项目为了充分利用这个CoreText教程，您首先要知道iOS开发的基础知识。如果你是iOS开发新手，首先你应该看看的一些基础教程.事不宜迟，让我们通过自己开发一个简单的"
                  },
                  {
                  "type": "link",
-                 "title": "https://www.baidu.com",
+                 "title": "《杂志》应用程序:https://www.baidu.com",
                  "url": "https://www.apple.com"
                  }
                  ]

@@ -14,5 +14,6 @@
 @property (assign, nonatomic) CTFrameRef ctFrame;
 @property (assign, nonatomic) CGFloat height;
 @property (nonatomic, strong) NSArray *linkArray;
+@property (nonatomic, strong)NSMutableAttributedString *mString;
 
 @end

@@ -152,6 +152,7 @@
 				TargetAttributes = {
 					328AF8351BF03DC400C02A1D = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = ZAB4L2B7UQ;
 					};
 				};
 			};
@@ -313,6 +314,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZAB4L2B7UQ;
 				INFOPLIST_FILE = "富文本Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mycompany.dev.---Demo";
@@ -324,6 +326,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZAB4L2B7UQ;
 				INFOPLIST_FILE = "富文本Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mycompany.dev.---Demo";

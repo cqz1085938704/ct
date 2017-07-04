@@ -27,6 +27,7 @@
     CGAffineTransform transform = CGAffineTransformMakeTranslation(0, view.height);
     transform = CGAffineTransformScale(transform, 1, -1);
     
+    CoreTextLinkData *result = nil;
     for (int i = 0; i < count; i ++)
     {
         CTLineRef line = CFArrayGetValueAtIndex(lines, i);
@@ -46,7 +47,7 @@
                 if (NSLocationInRange(idx, linkD.range))
                 {
                     NSLog(@"link taped");
-                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:linkD.link]];
+                    result = linkD;
                     break;
                 }
             }
@@ -55,7 +56,7 @@
         }
     }
     
-    return nil;
+    return result;
 }
 
 +(CGRect)getLineBounds:(CTLineRef)line
