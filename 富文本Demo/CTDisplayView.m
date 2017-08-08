@@ -60,6 +60,13 @@
 -(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [self showTouchFeedback:NO withLink:self.currentSelectedLink];
+    
+    CoreTextLinkData *link = [CoreTextUtil touchLinkInView:self atPoint:[[touches anyObject] locationInView:self] data:self.data];
+    if (!link)
+    {
+        return;
+    }
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:link.link]];
 }
 
 -(void)showTouchFeedback:(BOOL)show withLink:(CoreTextLinkData *)link

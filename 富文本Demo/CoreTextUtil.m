@@ -59,6 +59,39 @@
     return result;
 }
 
++(CGRect)getRectInView:(UIView *)view
+               atPoint:(CGPoint)point
+                  data:(CoreTextData *)data
+{
+    CTFrameRef tf = data.ctFrame;
+    CFArrayRef lines = CTFrameGetLines(tf);
+    if (!lines) return CGRectZero;
+    
+    CFIndex count = CFArrayGetCount(lines);
+    CGPoint origions[count];
+    CTFrameGetLineOrigins(tf, CFRangeMake(0, 0), origions);
+    
+    CGAffineTransform transform = CGAffineTransformMakeTranslation(0, view.height);
+    transform = CGAffineTransformScale(transform, 1, -1);
+    
+    CGRect rectToReturn = CGRectZero;
+    for (int i = 0; i < count; i ++)
+    {
+        CTLineRef line = CFArrayGetValueAtIndex(lines, i);
+        
+        CGPoint lineOrigin = origions[i];
+        
+        CGRect flippedRect = [self getLineBounds:line origion:lineOrigin];
+        CGRect rect = CGRectApplyAffineTransform(flippedRect, transform);
+        if (CGRectContainsPoint(rect, point))
+        {
+            rectToReturn = rect;
+            break;
+        }
+    }
+    return rectToReturn;
+}
+
 +(CGRect)getLineBounds:(CTLineRef)line
                origion:(CGPoint)origin
 {

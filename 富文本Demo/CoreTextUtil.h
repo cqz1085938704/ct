@@ -12,6 +12,9 @@
 
 @interface CoreTextUtil : NSObject
 
++(CGRect)getRectInView:(UIView *)view
+               atPoint:(CGPoint)point
+                  data:(CoreTextData *)data;
 +(CoreTextLinkData *)touchLinkInView:(UIView *)view
                              atPoint:(CGPoint)point
                                 data:(CoreTextData *)data;
