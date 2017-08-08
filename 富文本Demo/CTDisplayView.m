@@ -29,6 +29,39 @@
     return self;
 }
 
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    CoreTextLinkData *link = [CoreTextUtil touchLinkInView:self atPoint:[[touches anyObject] locationInView:self] data:self.data];
+    if (!link)
+    {
+        return;
+    }
+    
+    self.currentSelectedLink = link;
+    [self showTouchFeedback:YES withLink:link];
+}
+
+-(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    CoreTextLinkData *link = [CoreTextUtil touchLinkInView:self atPoint:[[touches anyObject] locationInView:self] data:self.data];
+    if (!link)
+    {
+        [self showTouchFeedback:NO withLink:self.currentSelectedLink];
+        return;
+    }
+    
+    if (link != self.currentSelectedLink)
+    {
+        self.currentSelectedLink = link;
+    }
+    [self showTouchFeedback:YES withLink:link];
+}
+
+-(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self showTouchFeedback:NO withLink:self.currentSelectedLink];
+}
+
 -(void)showTouchFeedback:(BOOL)show withLink:(CoreTextLinkData *)link
 {
     if (show)
@@ -52,28 +85,6 @@
     CTFrameRef frame = [CTFrameParser createFrameWithFrameSetter:frameSetter config:config height:textHeight];
     self.data.ctFrame = frame;
     [self setNeedsDisplay];
-}
-
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    CoreTextLinkData *link = [CoreTextUtil touchLinkInView:self atPoint:[[touches anyObject] locationInView:self] data:self.data];
-    if (!link)
-    {
-        return;
-    }
-    
-    self.currentSelectedLink = link;
-    [self showTouchFeedback:YES withLink:link];
-}
-
--(void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    [self showTouchFeedback:NO withLink:self.currentSelectedLink];
-}
-
--(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    [self showTouchFeedback:NO withLink:self.currentSelectedLink];
 }
 
 -(void)drawRect:(CGRect)rect
